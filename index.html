@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>erkv</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-8 sm:p-12 md:p-24">
+
+  <div class="w-full max-w-xs flex flex-col items-center">
+
+    <!-- HEADER -->
+    <header class="bg-zinc-900/15 p-4 rounded-lg w-full">
+      <div class="flex items-center justify-between space-x-4">
+        <div class="flex flex-col">
+          <h1 class="text-3xl font-bold">erkv</h1>
+          <p class="text-gray-400 mt-1" id="funnything"></p>
+        </div>
+        <div class="relative h-16 w-16">
+          <img src="pfp.webp" alt="pfp img"
+            class="rounded-md object-cover h-full w-full transition-transform hover:scale-105 duration-300" />
+        </div>
+      </div>
+    </header>
+
+    <!-- MUSIC -->
+    <div class="mt-6 w-full">
+      <p class="text-gray-400 mb-2 text-center">I'm listening to:</p>
+      <div class="bg-zinc-900/15 p-3 rounded-lg flex items-center space-x-4 w-full">
+        <img id="albumArt"
+          class="h-20 w-20 rounded-md object-cover transition-transform hover:scale-105 duration-300"
+          src="default.webp"
+          onerror="this.onerror=null; this.src='default.webp';" />
+        <div class="flex flex-col justify-center">
+          <p id="trackTitle" class="text-lg font-semibold">I'm not listening to music right now.</p>
+          <p id="artistName" class="text-gray-400 text-sm"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="grid grid-cols-5 gap-6 gap-y-4 mt-8 w-full">
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://github.com target="_blank">
+        <i class="fa-brands fa-github text-xl"></i>
+      </a>
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://x.com" target="_blank">
+        <i class="fa-brands fa-twitter text-xl"></i>
+      </a>
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram text-xl"></i>
+      </a>
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://t.me" target="_blank">
+        <i class="fa-brands fa-telegram text-xl"></i>
+      </a>
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="mailto:mail@example.com" target="_blank">
+        <i class="fa-solid fa-envelope text-xl"></i>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-5 gap-6 gap-y-4 mt-4 w-full">
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://steamcommunity.com" target="_blank">
+        <i class="fab fa-steam-symbol text-xl"></i>
+      </a>
+      <button onclick="copyToClipboard(this, 'your_epic_games_username')"
+        class="text-white hover:text-gray-300 flex items-center justify-center"
+        type="button"
+        data-bs-toggle="popover"
+        data-bs-content="Copied!">
+        <img src="https://img.icons8.com/?size=100&id=44492&format=png&color=FFFFFF"
+          class="w-6 h-6" />
+      </button>
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://www.roblox.com" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=r2K3g95VQHBR&format=png&color=FFFFFF"
+          class="w-6 h-6" />
+      </a>
+      <button onclick="copyToClipboard(this, 'yourdiscordnickname#6767')"
+        class="text-white hover:text-gray-300 flex items-center justify-center"
+        type="button"
+        data-bs-toggle="popover"
+        data-bs-content="Copied!">
+        <i class="fab fa-discord text-xl"></i>
+      </button>
+      <a class="text-white hover:text-gray-300 flex items-center justify-center"
+        href="https://myanimelist.net" target="_blank">
+        <img src="https://cdn.simpleicons.org/myanimelist/ffffff" class="w-6 h-6" alt=" MyAnimeList"/>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
